@@ -73,7 +73,7 @@ export function Home() {
                             <Button_White>
                                 <PictureAsPdfIcon sx={{ pr: 1, fontSize: 24 }} />
                                 <a target='_blank' style={{ textDecoration: 'none', color: 'white' }}
-                                    href='https://drive.google.com/file/d/1d4nahdnSAAPdrfvJGkWmymVIGFeM0Eqc/view?usp=share_link'
+                                    href='https://drive.google.com/file/d/11Hj4bpzNjO3NFAFbrPU5Xmt_B6e4Hj8G/view?usp=sharing'
                                 >Resume</a>
                             </Button_White>
 
