@@ -13,8 +13,10 @@ theme.typography.body1 = {
     [theme.breakpoints.up('md')]: {
         fontSize: '1.6rem',
     },
+    [theme.breakpoints.up('lg')]: {
+        fontSize: '1.8rem',
+    },
 };
-
 
 export function About() {
 
@@ -35,7 +37,7 @@ export function About() {
                     </Grid>
 
                     {/* about content */}
-                    <Grid item xs={12} md={8} height='100%' sx={{ p: { xs: 3, md: 5 } }}>
+                    <Grid item xs={12} md={8} height='100%' sx={{ p: { xs: 1, sm: 3, md: 5 } }}>
                         <Stack justifyContent="center" alignItems="center" height='100%'>
                             <ThemeProvider theme={theme}>
                                 <Typography id='about-content' variant="body1">{aboutContent}</Typography>

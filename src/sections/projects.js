@@ -63,8 +63,32 @@ export function Projects() {
                         </Card>
                     </Grid>
 
-                    {/* projects 3 */}
+                    {/* project 3 */}
                     <Grid item>
+                        <Card id='card'>
+                            <CardMedia id='cardImage' image={require('../assets/img/service_4_you.jpg')} />
+                            <CardContent id='description'>
+                                <Typography gutterBottom variant="h5" component="div">
+                                    Service For You
+                                </Typography>
+                                <Typography variant="body1">
+                                    In this site service provider can create an account and post this service.
+                                    A client can find a service and schedule a booking according to service provider availability.
+                                </Typography>
+                                <Box id='links'>
+                                    <a target='_blank' href="https://github.com/Joshua10roys/service_4_you_frontend/tree/master">
+                                        View Source
+                                    </a>
+                                    <a target='_blank' href="https://gorgeous-wisp-58582a.netlify.app/home">
+                                        View Site
+                                    </a>
+                                </Box>
+                            </CardContent>
+                        </Card>
+                    </Grid>
+
+                    {/* projects 4 */}
+                    {/* <Grid item>
                         <Card id='card'>
                             <CardMedia id='cardImage' image={require('../assets/img/authentication.jpg')} />
                             <CardContent id='description'>
@@ -85,7 +109,7 @@ export function Projects() {
                                 </Box>
                             </CardContent>
                         </Card>
-                    </Grid>
+                    </Grid> */}
 
                 </Grid>
 

@@ -2,8 +2,10 @@ import { Container, Box, Paper, Typography, Grid, Tooltip, Zoom } from "@mui/mat
 
 
 // skills list
-const skills = ["HTML5", "CSS3", "JavaScript", "React", "Bootstrap", "Material-Ui",
-    "Node.js", "Express.js", "MongoDB", "Postman", "Git", "Github", "Visual Studio Code"]
+const skills = [
+    "HTML5", "CSS3", "JavaScript", "TypeScript", "React", "Bootstrap", "Material-Ui",
+    "Node.js", "Express.js", "MongoDB", "Mongoose", "Postman", "Git", "Github", "Visual Studio Code",
+]
 
 
 export function Skills() {
@@ -21,9 +23,9 @@ export function Skills() {
 
                     {skills.map(item => (
                         <Grid item key={item}>
-                            <Tooltip arrow title={item} placement='top' TransitionComponent={Zoom} >
+                            <Tooltip arrow title={item} placement='top' TransitionComponent={Zoom}>
                                 <Paper id='skillPaper' elevation={8}>
-                                    <img id='skillImage' src={require(`../assets/img/${item}.png`)} />
+                                    <img id='skillImage' alt={item} src={require(`../assets/img/${item}.png`)} />
                                 </Paper>
                             </Tooltip>
                         </Grid>

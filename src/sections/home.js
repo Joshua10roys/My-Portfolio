@@ -33,7 +33,6 @@ const Button_White = styled(Button)(({ theme }) => ({
     }
 }));
 
-
 // text responsive theme
 let theme = createTheme();
 theme.typography.h3 = {
@@ -41,7 +40,7 @@ theme.typography.h3 = {
         fontSize: '1.5rem',
     },
     [theme.breakpoints.up('sm')]: {
-        fontSize: '2rem',
+        fontSize: '2.2rem',
     },
     [theme.breakpoints.up('md')]: {
         fontSize: '2.5rem',
@@ -54,7 +53,6 @@ theme.typography.h3 = {
     },
 };
 
-
 export function Home() {
 
     return (
@@ -65,19 +63,19 @@ export function Home() {
                     <ThemeProvider theme={theme}>
 
                         <Typography className="homeText" variant="h3">Hello... !</Typography>
-                        <Typography className="homeText" variant="h3">I am Joshua Ashvinth Roys,</Typography>
-                        <Typography className="homeText" variant="h3">Full Stack Web Developer</Typography>
+                        <Typography className="homeText" variant="h3">I'm Joshua Ashvinth Roys</Typography>
+                        <Typography className="homeText" variant="h3">Passionate Backend Developer</Typography>
 
                         <Box>
 
-                            <Button_White>
+                            <Button_White sx={{ mt: { md: 1 } }}>
                                 <PictureAsPdfIcon sx={{ pr: 1, fontSize: 24 }} />
                                 <a target='_blank' style={{ textDecoration: 'none', color: 'white' }}
                                     href='https://drive.google.com/file/d/11Hj4bpzNjO3NFAFbrPU5Xmt_B6e4Hj8G/view?usp=sharing'
                                 >Resume</a>
                             </Button_White>
 
-                            <Button_White>
+                            <Button_White sx={{ mt: { md: 1 } }}>
                                 <GitHubIcon sx={{ pr: 1, fontSize: 24 }} />
                                 <a target='_blank' style={{ textDecoration: 'none', color: 'white' }}
                                     href='https://github.com/Joshua10roys'

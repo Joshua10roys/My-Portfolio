@@ -1,9 +1,7 @@
 import "./style/style.css"
+import { SITE_URL } from "./assets/links/url.js";
 import { useState, useEffect, forwardRef } from "react";
 import { Routes, Route, Navigate, } from "react-router-dom";
-import { Snackbar, } from '@mui/material';
-import MuiAlert from '@mui/material/Alert';
-import CloseIcon from '@mui/icons-material/Close';
 import { Appbar } from "./sections/appbar.js";
 import { Home } from "./sections/home.js";
 import { About } from "./sections/about.js";
@@ -11,6 +9,8 @@ import { Skills } from "./sections/skills.js";
 import { Projects } from "./sections/projects.js";
 import { Contact } from "./sections/contact.js";
 import { Footer } from "./sections/footer.js";
+import Snackbar from '@mui/material/Snackbar';
+import MuiAlert from '@mui/material/Alert';
 
 
 const Alert = forwardRef(function Alert(props, ref) {
@@ -20,6 +20,8 @@ const Alert = forwardRef(function Alert(props, ref) {
 
 export default function App() {
 
+  // for snackbar
+  // starts here
   const [open, setOpen] = useState(false);
   const [message, setMessage] = useState('');
   const [severity, setSeverity] = useState('info');
@@ -34,23 +36,25 @@ export default function App() {
     setSeverity(severity);
     setOpen(true);
   };
+  // ends here
 
+  // replace to home url on site reload
   useEffect(() => {
     if (window.location.href.includes('#')) {
-      window.location.replace('http://localhost:3000/')
+      window.location.replace(SITE_URL)
     }
   }, [])
 
   return (
     <>
-
-      <Snackbar open={open} autoHideDuration={5000} onClose={handleClose}
+      {/* alert snackbar */}
+      <Snackbar open={open} autoHideDuration={4000} onClose={handleClose}
         anchorOrigin={{ vertical: 'top', horizontal: 'right' }}>
         <Alert onClose={handleClose} severity={severity}>
           {message}
         </Alert>
       </Snackbar>
-
+      {/* routes */}
       <Routes>
         <Route path="/" element={<Pages snackbarAlert={snackbarAlert} />} />
         <Route path='*' element={<Navigate replace to={'/'} />} />
