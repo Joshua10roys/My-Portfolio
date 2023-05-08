@@ -64,7 +64,7 @@ export function Contact({ snackbarAlert }) {
                         {/* content title */}
                         <Typography id='contact' variant="h4" align="center">Contact Me</Typography>
 
-                        <Grid container sx={{ pt: { md: 3 } }}>
+                        <Grid container direction="row" sx={{ pt: { md: 3 } }}>
 
                             {/* contact details */}
                             <Grid item xs={12} md={5} lg={4}>
@@ -84,10 +84,12 @@ export function Contact({ snackbarAlert }) {
 
                             </Grid>
 
+                            {/* vertical divider */}
                             <Divider orientation="vertical" flexItem
                                 sx={{ display: { xs: 'none', md: 'block' }, mr: "-1px" }} />
 
-                            <Grid item xs={12} md={7} lg={8}>
+                            {/* message form */}
+                            <Grid item xs={12} md={7} lg={7}>
 
                                 <Divider sx={{ display: { xs: 'block', md: 'none' } }} />
 

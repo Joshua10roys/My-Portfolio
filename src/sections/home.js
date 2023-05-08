@@ -62,9 +62,15 @@ export function Home() {
 
                     <ThemeProvider theme={theme}>
 
-                        <Typography className="homeText" variant="h3">Hello... !</Typography>
-                        <Typography className="homeText" variant="h3">I'm Joshua Ashvinth Roys</Typography>
-                        <Typography className="homeText" variant="h3">Passionate Backend Developer</Typography>
+                        <Typography className="homeText" variant="h3">
+                            Hello... !
+                        </Typography>
+                        <Typography className="homeText" variant="h3" sx={{ color: "orange" }}>
+                            I'm Joshua Ashvinth Roys
+                        </Typography>
+                        <Typography className="homeText" variant="h3">
+                            Passionate Backend Developer
+                        </Typography>
 
                         <Box>
 
